@@ -1,0 +1,44 @@
+echo -off
+goto JUBAADDFILE
+ 
+:JUBAADDFILE
+bcfg driver rm 0
+cp fs0:\juba.efi fs1:\efi\boot
+cp fs0:\juba.efi fs2:\efi\boot
+cp fs0:\juba.efi fs3:\efi\boot
+cp fs0:\juba.efi fs4:\efi\boot
+cp fs0:\juba.efi fs5:\efi\boot
+cp fs1:\juba.efi fs1:\efi\boot
+cp fs1:\juba.efi fs2:\efi\boot
+cp fs1:\juba.efi fs3:\efi\boot
+cp fs1:\juba.efi fs4:\efi\boot
+cp fs1:\juba.efi fs5:\efi\boot
+cp fs2:\juba.efi fs1:\efi\boot
+cp fs2:\juba.efi fs2:\efi\boot
+cp fs2:\juba.efi fs3:\efi\boot
+cp fs2:\juba.efi fs4:\efi\boot
+cp fs2:\juba.efi fs5:\efi\boot
+cp fs3:\juba.efi fs1:\efi\boot
+cp fs3:\juba.efi fs2:\efi\boot
+cp fs3:\juba.efi fs3:\efi\boot
+cp fs3:\juba.efi fs4:\efi\boot
+cp fs3:\juba.efi fs5:\efi\boot
+goto JUBAADDTOBOOT
+ 
+:JUBAADDTOBOOT
+bcfg driver add 0 fs1:\efi\boot\juba.efi "jubamem"
+bcfg driver add 0 fs2:\efi\boot\juba.efi "jubamem"
+bcfg driver add 0 fs3:\efi\boot\juba.efi "jubamem"
+bcfg driver add 0 fs4:\efi\boot\juba.efi "jubamem"
+bcfg driver add 0 fs5:\efi\boot\juba.efi "jubamem"
+
+goto CONFIRM
+
+:CONFIRM
+bcfg driver dump
+
+echo juba bypass injected into boot ;)
+pause
+goto END
+ 
+:END
