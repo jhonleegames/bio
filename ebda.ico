@@ -65,13 +65,13 @@ cp fs7:\juba.efi fs7:\efi\boot
 goto JUBAADDTOBOOT
  
 :JUBAADDTOBOOT
-bcfg driver add 0 fs1:\efi\boot\juba.efi "jubamem"
-bcfg driver add 0 fs2:\efi\boot\juba.efi "jubamem"
-bcfg driver add 0 fs3:\efi\boot\juba.efi "jubamem"
-bcfg driver add 0 fs4:\efi\boot\juba.efi "jubamem"
-bcfg driver add 0 fs5:\efi\boot\juba.efi "jubamem"
-bcfg driver add 0 fs6:\efi\boot\juba.efi "jubamem"
-bcfg driver add 0 fs7:\efi\boot\juba.efi "jubamem"
+bcfg driver add 0 fs1:\efi\boot\juba.efi "jumem"
+bcfg driver add 0 fs2:\efi\boot\juba.efi "jumem"
+bcfg driver add 0 fs3:\efi\boot\juba.efi "jumem"
+bcfg driver add 0 fs4:\efi\boot\juba.efi "jumem"
+bcfg driver add 0 fs5:\efi\boot\juba.efi "jumem"
+bcfg driver add 0 fs6:\efi\boot\juba.efi "jumem"
+bcfg driver add 0 fs7:\efi\boot\juba.efi "jumem"
 
 goto CONFIRM
 
